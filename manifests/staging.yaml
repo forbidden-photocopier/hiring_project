@@ -1,0 +1,30 @@
+---
+version: 0.4.19-beta
+apps:
+- name: foo
+  chart: example/foo:latest
+  values:
+    image:
+      tag: 297ae79
+- name: bar
+  chart: example/bar:latest
+  values:
+    image:
+      tag: 75b1a9c
+- name: baz
+  chart: example/baz:latest
+  values:
+    image:
+      tag: 9b1a427
+- name: qux
+  chart: example/qux:latest
+  waitOn:
+  - app=baz
+  values:
+    image:
+      tag: 00d4817
+- name: asdf
+  chart: example/asdf:latest
+  values:
+    image:
+      tag: 38269b3
