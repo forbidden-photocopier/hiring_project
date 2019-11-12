@@ -10,7 +10,7 @@ apps:
   chart: example/bar:latest
   values:
     image:
-      tag: 6a717b1
+      tag: 75b1a9c
 - name: baz
   chart: example/baz:latest
   values:
